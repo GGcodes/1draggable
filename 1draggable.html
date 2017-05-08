@@ -12,6 +12,14 @@
             border: 1px solid black;
             margin: 2px;
         }
+
+        #imp
+        {
+          position: fixed;
+          left:0;
+          top:0;
+
+        }
       </style>
 
 <link rel="stylesheet" href="jquery-ui.css">
@@ -28,7 +36,7 @@
 
 
         $(document).ready(function(){
-            $("h1:first, #box").draggable();//selects first "p\"ARAGRAPH" element
+            $("p:last, #box").draggable();//selects first "p\"ARAGRAPH" element
         });
     </script>
 
@@ -36,9 +44,15 @@
 
   <body>
 
-    <h1>This is my message!!!</h1>
+    <p>But stay woke
+They creepin
+They gon' find you
+Gon' catch you sleepin' (oh)
+Now stay woke
+They creepin'
+Now don't you close your eyes</p>
     <div id="box"></div>
-    <p>This is another message!!</p>
+    <p id="imp">ome important message</p>
 
   </body>
   </html>
