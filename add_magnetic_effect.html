@@ -1,11 +1,31 @@
 <!DOCTYPE html>
   <html>
   <head>
-      <title>Restrict Draggability</title>
+      <title>Magnetic Effect</title>
 
+      <style>
+          #main1{
+              width:500px;
+              height:500px;
+              margin:0px auto;
+              border: 2px solid black;
 
-</style>
+          }
 
+          #main2{
+              width:500px;
+              height:500px;
+              margin:0px auto;
+              border: 2px solid black;
+
+          }
+          .sub{
+              width:100px;
+              height:100px;
+              border:1px solid black;
+
+            }
+      </style>
 <link rel="stylesheet" href="jquery-ui.css">
 <script src="jquery.js"></script>
 <script src="jquery-ui.js"></script>
@@ -20,9 +40,11 @@
 
   <script>
   $(document).ready(function(){
-      $(#sub1").draggable({snap:true});
-      $(#sub2, #sub3, #main2").draggable();
-    });
+      $("#sub1").draggable({snap:"#main1", snapTolerance:20});
+      $("#sub2").draggable({snap:true, snapMode: "inner"});
+      $("#main2").draggable();
+          });
+
   </script>
 
 </head>
@@ -34,8 +56,11 @@
     <div class="sub" id="sub2" style="background: green;"></div>
     <div class="sub" id="sub3" style="background: blue;"></div>
 
-    <div id="main2">
-    </div>
+</div>
+
+<div id="main2">
+
+
 </div>
 </body>
 </html>
